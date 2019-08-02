@@ -728,6 +728,7 @@ GameObject:
   - component: {fileID: 188272937}
   - component: {fileID: 188272936}
   - component: {fileID: 188272935}
+  - component: {fileID: 188272938}
   m_Layer: 5
   m_Name: Expositor
   m_TagString: Untagged
@@ -811,6 +812,44 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 188272933}
+--- !u!114 &188272938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 188272933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5004115d756434945ace242599eab77e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 
+  windowType: 0
+  isActive: 0
+  posInit: {fileID: 0}
+  posFinal: {fileID: 0}
+  fade: 1
+  time: 1
+  onBeginShowPos:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onFinishShowPos:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onBeginHidePos:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onFinishHidePos:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &221782955
 GameObject:
   m_ObjectHideFlags: 0
@@ -8468,6 +8507,7 @@ GameObject:
   - component: {fileID: 2097979101}
   - component: {fileID: 2097979100}
   - component: {fileID: 2097979099}
+  - component: {fileID: 2097979102}
   m_Layer: 5
   m_Name: Charla
   m_TagString: Untagged
@@ -8551,6 +8591,44 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2097979097}
+--- !u!114 &2097979102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2097979097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5004115d756434945ace242599eab77e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 
+  windowType: 0
+  isActive: 0
+  posInit: {fileID: 0}
+  posFinal: {fileID: 0}
+  fade: 1
+  time: 1
+  onBeginShowPos:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onFinishShowPos:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onBeginHidePos:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onFinishHidePos:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2136283737
 GameObject:
   m_ObjectHideFlags: 0
