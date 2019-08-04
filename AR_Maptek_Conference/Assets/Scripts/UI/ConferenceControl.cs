@@ -12,6 +12,8 @@ public class ConferenceControl : MonoBehaviour
     // Informacion de exposiciones
     public List<Exposition> arrExposition;
 
+    public Exposition currExposition = null;
+
     private static ConferenceControl _instace;
     public static ConferenceControl Instance
     {
@@ -42,6 +44,9 @@ public class ConferenceControl : MonoBehaviour
 
     void Start()
     {
+        // Obtener Likes de usuario
+
+        // Obtener conferencias
         var expoJson = Resources.Load<TextAsset>("Conference/Expositions");
 
         var n = JSON.Parse(expoJson.ToString());
@@ -55,6 +60,7 @@ public class ConferenceControl : MonoBehaviour
             e.id = n["message"][i]["id"].AsInt;
             e.day = DateTime.Parse(n["message"][i]["day"].Value);
             e.name_exposition = n["message"][i]["name_exposition"].Value;
+            e.info_exposition = n["message"][i]["info_exposition"].Value;
             e.hour = n["message"][i]["hour"].Value;
             e.room = n["message"][i]["room"].Value;
             e.name_expositor = n["message"][i]["name_expositor"].Value;
@@ -91,5 +97,14 @@ public class ConferenceControl : MonoBehaviour
         List<Exposition> e = arrExposition.Where((exp) => (int)exp.day.Day == day).ToList();
 
         return e.OrderByDescending( (d) => d.day).Reverse().ToArray();
+    }
+
+    public void setLikeExposition()
+    {
+        Exposition expo = arrExposition.Single((ex) => ex.id == currExposition.id);
+
+        expo.isLiked = !expo.isLiked;
+
+        // TODO Subir like a webservice
     }
 }

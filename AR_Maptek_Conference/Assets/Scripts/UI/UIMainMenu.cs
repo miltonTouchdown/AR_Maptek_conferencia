@@ -21,6 +21,11 @@ public class UIMainMenu : MonoBehaviour
 
     [Header("Charla")]
     public WindowMovement viewCharla;
+    public TextMeshProUGUI titleCharla;
+    public TextMeshProUGUI aboutCharla;
+
+    public Button bttnLike;
+    public Image imgLike;
 
     [Header("Expositor")]
     public WindowMovement viewExpositor;
@@ -74,12 +79,43 @@ public class UIMainMenu : MonoBehaviour
             // TODO Agregar listener a botones para cambiar de vista
             bttn.onClick.AddListener(() => 
             {
-                viewCharla.setActiveWindow(true);
+                ConferenceControl.Instance.currExposition = e;
+
+                ShowCharlaInformation();
             });
 
             // Cambiar texto informacion
             bttn.GetComponentInChildren<TextMeshProUGUI>().text = getFormatStringInfo(e);
         }
+    }
+
+    public void ShowCharlaInformation()
+    {
+        viewCharla.setActiveWindow(true);
+
+        imgLike.color = (ConferenceControl.Instance.currExposition.isLiked) ? colorMaptek : Color.white;
+
+        titleCharla.text = getFormatStringInfo(ConferenceControl.Instance.currExposition);
+        aboutCharla.text = ConferenceControl.Instance.currExposition.info_exposition;
+    }
+
+    public void setLikeCharla()
+    {
+        ConferenceControl.Instance.setLikeExposition();
+
+        imgLike.color = (ConferenceControl.Instance.currExposition.isLiked) ? colorMaptek : Color.white;
+
+        // TODO: Si es true entonces mostrar mensaje para enviar mail
+    }
+
+    public void ShowExpositorInformation()
+    {
+        viewExpositor.setActiveWindow(true);
+    }
+
+    public void BackToMainMenu()
+    {
+        ConferenceControl.Instance.currExposition = null;
     }
 
     private string getFormatStringInfo(Exposition expo)

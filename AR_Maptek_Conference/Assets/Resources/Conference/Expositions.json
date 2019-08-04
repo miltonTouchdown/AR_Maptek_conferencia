@@ -6,6 +6,7 @@
 						"id": "0",
 						"day": "2019-08-20 09:00:00",
 						"name_exposition": "Session A: How to create geological models",
+						"info_exposition": "Session A: How to create geological models Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
 						"hour": "09:00 am - 10:30 am",
 						"room": "A",
 						"name_expositor": "Camila Gonzalez",
@@ -16,6 +17,7 @@
 						"id": "1",
 						"day": "2019-08-21 08:00:00",
 						"name_exposition": "Session B: How to create geological models",
+						"info_exposition": "Session B: How to create geological models Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
 						"hour": "08:00 am - 18:30 am",
 						"room": "B",
 						"name_expositor": "Milton Pulgar",
@@ -26,6 +28,7 @@
 						"id": "2",
 						"day": "2019-08-23 19:00:00",
 						"name_exposition": "Session C: How to create geological models",
+						"info_exposition": "Session C: How to create geological models Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
 						"hour": "19:00 am - 20:30 am",
 						"room": "C",
 						"name_expositor": "Kiro",
@@ -36,6 +39,7 @@
 						"id": "3",
 						"day": "2019-08-20 07:00:00",
 						"name_exposition": "Session A: How to create geological models",
+						"info_exposition": "Session J: How to create geological models Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
 						"hour": "07:00 am - 10:30 am",
 						"room": "J",
 						"name_expositor": "Camila Gonzalez",
@@ -46,6 +50,7 @@
 						"id": "4",
 						"day": "2019-08-21 10:00:00",
 						"name_exposition": "Session B: How to create geological models",
+						"info_exposition": "Session Q: How to create geological models Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
 						"hour": "10:00 am - 18:30 am",
 						"room": "Q",
 						"name_expositor": "Milton Pulgar",
@@ -53,14 +58,15 @@
 						"info_expositor": ""
 					},
 					{
-						"id": "5",
 						"day": "2019-08-23 08:00:00",
-						"name_exposition": "Session C: How to create geological models",
 						"hour": "08:00 am - 20:30 am",
-						"room": "D",
+						"id": "5",
+						"info_exposition": "Session D: How to create geological models Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+						"info_expositor": "",
+						"name_exposition": "Session C: How to create geological models",
 						"name_expositor": "Kiro",
 						"photo_expositor": "",
-						"info_expositor": ""
+						"room": "D"
 					}
         ]
 }

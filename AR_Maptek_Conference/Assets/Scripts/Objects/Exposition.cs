@@ -10,6 +10,7 @@ public class Exposition
     [SerializeField]
     public DateTime day; // fecha y hora de la charla. Formato ejemplo "2019-07-27 04:35:52"
     public string name_exposition;
+    public string info_exposition;
     public string hour; // Horario de la charla. Formato ejemplo "08:00 am - 10:00 am"
     public string room;
     public string name_expositor;
