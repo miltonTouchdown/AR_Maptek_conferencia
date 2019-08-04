@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class AppManager : MonoBehaviour
 {
+    public GameObject loadingScreen;
+
+    public User currUser = null;
+
     private static AppManager _instace;
     public static AppManager Instance
     {
@@ -38,4 +42,17 @@ public class AppManager : MonoBehaviour
     {
         
     }
+
+    public void DownloadDataConference()
+    {
+
+    }
+
+    public void DownloadDataUser()
+    {
+
+    }
+
+    public delegate void OnFinishCallback();
+    public static event OnFinishCallback onFinish;
 }
