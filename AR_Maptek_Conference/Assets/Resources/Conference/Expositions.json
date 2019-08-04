@@ -1,0 +1,66 @@
+{
+    "status": "OK",
+    "message":
+        [
+					{
+						"id": "0",
+						"day": "2019-08-20 09:00:00",
+						"name_exposition": "Session A: How to create geological models",
+						"hour": "09:00 am - 10:30 am",
+						"room": "A",
+						"name_expositor": "Camila Gonzalez",
+						"photo_expositor": "",
+						"info_expositor": ""
+					},
+					{
+						"id": "1",
+						"day": "2019-08-21 08:00:00",
+						"name_exposition": "Session B: How to create geological models",
+						"hour": "08:00 am - 18:30 am",
+						"room": "B",
+						"name_expositor": "Milton Pulgar",
+						"photo_expositor": "",
+						"info_expositor": ""
+					},
+					{
+						"id": "2",
+						"day": "2019-08-23 19:00:00",
+						"name_exposition": "Session C: How to create geological models",
+						"hour": "19:00 am - 20:30 am",
+						"room": "C",
+						"name_expositor": "Kiro",
+						"photo_expositor": "",
+						"info_expositor": ""
+					},
+					{
+						"id": "3",
+						"day": "2019-08-20 07:00:00",
+						"name_exposition": "Session A: How to create geological models",
+						"hour": "07:00 am - 10:30 am",
+						"room": "J",
+						"name_expositor": "Camila Gonzalez",
+						"photo_expositor": "",
+						"info_expositor": ""
+					},
+					{
+						"id": "4",
+						"day": "2019-08-21 10:00:00",
+						"name_exposition": "Session B: How to create geological models",
+						"hour": "10:00 am - 18:30 am",
+						"room": "Q",
+						"name_expositor": "Milton Pulgar",
+						"photo_expositor": "",
+						"info_expositor": ""
+					},
+					{
+						"id": "5",
+						"day": "2019-08-23 08:00:00",
+						"name_exposition": "Session C: How to create geological models",
+						"hour": "08:00 am - 20:30 am",
+						"room": "D",
+						"name_expositor": "Kiro",
+						"photo_expositor": "",
+						"info_expositor": ""
+					}
+        ]
+}
