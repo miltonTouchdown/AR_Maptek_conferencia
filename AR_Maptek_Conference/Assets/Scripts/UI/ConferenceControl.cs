@@ -107,4 +107,17 @@ public class ConferenceControl : MonoBehaviour
 
         // TODO Subir like a webservice
     }
+
+    public Texture GetTextureExpositor()
+    {
+        // Cargar textura desde webservice
+
+        Texture2D t = new Texture2D(2, 2, TextureFormat.ARGB32, false);
+
+        Exposition expo = arrExposition.Single((ex) => ex.id == currExposition.id);
+
+        expo.photo_expositor = t;
+
+        return t;
+    }
 }

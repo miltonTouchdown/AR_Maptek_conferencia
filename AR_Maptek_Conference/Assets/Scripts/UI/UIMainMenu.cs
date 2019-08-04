@@ -30,6 +30,9 @@ public class UIMainMenu : MonoBehaviour
     [Header("Expositor")]
     public WindowMovement viewExpositor;
 
+    public TextMeshProUGUI aboutExpositor;
+    public RawImage rawimgExpositor;
+
     void Start ()
     {
         //initMainMenu();
@@ -111,6 +114,10 @@ public class UIMainMenu : MonoBehaviour
     public void ShowExpositorInformation()
     {
         viewExpositor.setActiveWindow(true);
+
+        aboutExpositor.text = ConferenceControl.Instance.currExposition.info_expositor;
+        rawimgExpositor.texture = (ConferenceControl.Instance.currExposition.photo_expositor != null) ?
+            ConferenceControl.Instance.currExposition.photo_expositor : ConferenceControl.Instance.GetTextureExpositor();
     }
 
     public void BackToMainMenu()
