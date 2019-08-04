@@ -76,6 +76,9 @@ public class ConferenceControl : MonoBehaviour
         arrExposition = expositions;
 
         isLoadConference = true;
+
+        //Test
+        FindObjectOfType<UIMainMenu>().initMainMenu();
     }
 
     /// <summary>

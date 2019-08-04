@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class UIMainMenu : MonoBehaviour
 {
+    [Header("General")]
+    public Color colorMaptek;
+
     [Header("Main Menu")]
     public GameObject prefCharlaGloblInfo;
     public Transform contentInfo;
@@ -16,18 +19,41 @@ public class UIMainMenu : MonoBehaviour
     public Button bttnDayTwo;
     public Button bttnDayThree;
 
+    [Header("Charla")]
+    public WindowMovement viewCharla;
+
+    [Header("Expositor")]
+    public WindowMovement viewExpositor;
+
     void Start ()
     {
-        initMenu();
+        //initMainMenu();
     }
 
-    public void initMenu()
+    public void initMainMenu()
     {
-        // Seleccionar dia 
-        Debug.Log(DateTime.Now.Day);
+        // Cambiar color del boton del dia y mostrar charlas
 
-        //bttnDayOne.onClick.AddListener(()=> { bttnDayOne.GetComponentInChildren<TextMeshProUGUI>().color = Color.white; });
-      
+        int today = DateTime.Now.Day;
+
+        Button bttnToday = null;
+
+        if (today <= 20)
+        {
+            bttnToday = bttnDayOne;
+        }
+        if(today == 21)
+        {
+            bttnToday = bttnDayTwo;
+        }
+        if (today >= 23)
+        {
+            bttnToday = bttnDayThree;
+        }
+
+        bttnToday.GetComponent<Image>().color = colorMaptek;
+        bttnToday.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+        bttnToday.onClick.Invoke();
     }
 
     public void ShowCharlasByDay(int day)
@@ -45,7 +71,11 @@ public class UIMainMenu : MonoBehaviour
         {
             Button bttn = Instantiate(prefCharlaGloblInfo, contentInfo).GetComponent<Button>();
 
-            // Agregar listener a botones
+            // TODO Agregar listener a botones para cambiar de vista
+            bttn.onClick.AddListener(() => 
+            {
+                viewCharla.setActiveWindow(true);
+            });
 
             // Cambiar texto informacion
             bttn.GetComponentInChildren<TextMeshProUGUI>().text = getFormatStringInfo(e);
