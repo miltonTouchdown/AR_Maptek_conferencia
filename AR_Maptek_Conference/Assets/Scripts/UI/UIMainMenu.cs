@@ -33,13 +33,25 @@ public class UIMainMenu : MonoBehaviour
     public TextMeshProUGUI aboutExpositor;
     public RawImage rawimgExpositor;
 
+    private PopUp _popUp;
+
     void Start ()
     {
-        //initMainMenu();
+        
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            Back();
+        }
     }
 
     public void initMainMenu()
     {
+        _popUp = FindObjectOfType<PopUp>();
+
         // Cambiar color del boton del dia y mostrar charlas
 
         int today = DateTime.Now.Day;
@@ -61,6 +73,8 @@ public class UIMainMenu : MonoBehaviour
 
         bttnToday.GetComponent<Image>().color = colorMaptek;
         bttnToday.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+
+        // Cargar charlas del dia
         bttnToday.onClick.Invoke();
     }
 
@@ -83,6 +97,7 @@ public class UIMainMenu : MonoBehaviour
             bttn.onClick.AddListener(() => 
             {
                 ConferenceControl.Instance.currExposition = e;
+                ConferenceControl.Instance.currExposition.isOpen = true;
 
                 ShowCharlaInformation();
             });
@@ -104,11 +119,21 @@ public class UIMainMenu : MonoBehaviour
 
     public void setLikeCharla()
     {
-        ConferenceControl.Instance.setLikeExposition();
+        ConferenceControl.Instance.setLikeExposition((s, m) =>
+        {
+            if (s)
+            {
+                imgLike.color = (ConferenceControl.Instance.currExposition.isLiked) ? colorMaptek : Color.white;
 
-        imgLike.color = (ConferenceControl.Instance.currExposition.isLiked) ? colorMaptek : Color.white;
+                // TODO: Si es true entonces mostrar mensaje para enviar mail
 
-        // TODO: Si es true entonces mostrar mensaje para enviar mail
+            }
+            else
+            {
+                // Problemas del servidor
+                _popUp.Show("Ups!", "Hay problemas con el servidor. Intente de nuevo");
+            }
+        });              
     }
 
     public void ShowExpositorInformation()
@@ -120,9 +145,26 @@ public class UIMainMenu : MonoBehaviour
             ConferenceControl.Instance.currExposition.photo_expositor : ConferenceControl.Instance.GetTextureExpositor();
     }
 
-    public void BackToMainMenu()
+    public void Back()
     {
-        ConferenceControl.Instance.currExposition = null;
+        if (viewExpositor.isActive)
+        {
+            viewExpositor.setActiveWindow(false);
+
+            return;
+        }
+
+        if (viewCharla.isActive)
+        {
+            viewCharla.setActiveWindow(false);
+
+            ConferenceControl.Instance.currExposition.isOpen = false;
+            ConferenceControl.Instance.currExposition = null;
+
+            return;
+        }
+
+        Application.Quit();
     }
 
     private string getFormatStringInfo(Exposition expo)

@@ -10,10 +10,12 @@ public class UIRegister : MonoBehaviour
     public InputField inputField;
 
     private SessionRegister _sessionRegister;
+    private PopUp _popUp;
 
     void Start()
     {
         _sessionRegister = FindObjectOfType<SessionRegister>();
+        _popUp = FindObjectOfType<PopUp>();
     }
 
     public void OnRegister()
@@ -21,7 +23,7 @@ public class UIRegister : MonoBehaviour
         string email = inputField.text;
 
         // Revisar formato de email
-        bool isMailValid = true;//new EmailAddressAttribute().IsValid(email);
+        bool isMailValid = EmailValidator.validateEmail(email);
 
         if (!isMailValid)
         {

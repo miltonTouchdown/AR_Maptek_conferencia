@@ -1,7 +1,4 @@
-﻿using SimpleJSON;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -46,31 +43,6 @@ public class ConferenceControl : MonoBehaviour
     {
         // Obtener Likes de usuario
 
-        // Obtener conferencias
-        var expoJson = Resources.Load<TextAsset>("Conference/Expositions");
-
-        var n = JSON.Parse(expoJson.ToString());
-
-        List<Exposition> arrExpo = new List<Exposition>();
-
-        for (int i = 0; i < n["message"].Count; i++)
-        {
-            Exposition e = new Exposition();
-
-            e.id = n["message"][i]["id"].AsInt;
-            e.day = DateTime.Parse(n["message"][i]["day"].Value);
-            e.name_exposition = n["message"][i]["name_exposition"].Value;
-            e.info_exposition = n["message"][i]["info_exposition"].Value;
-            e.hour = n["message"][i]["hour"].Value;
-            e.room = n["message"][i]["room"].Value;
-            e.name_expositor = n["message"][i]["name_expositor"].Value;
-            e.url_photo_expositor = n["message"][i]["photo_expositor"].Value;
-            e.info_expositor = n["message"][i]["info_expositor"].Value;
-
-            arrExpo.Add(e);
-        }
-
-        FillExpositionsInformation(arrExpo);
     }
 
     /// <summary>
@@ -82,9 +54,6 @@ public class ConferenceControl : MonoBehaviour
         arrExposition = expositions;
 
         isLoadConference = true;
-
-        //Test
-        FindObjectOfType<UIMainMenu>().initMainMenu();
     }
 
     /// <summary>
@@ -99,13 +68,73 @@ public class ConferenceControl : MonoBehaviour
         return e.OrderByDescending( (d) => d.day).Reverse().ToArray();
     }
 
-    public void setLikeExposition()
+    /// <summary>
+    /// Cambiar likes en las charlas
+    /// </summary>
+    /// <param name="indexLikes">Arreglo de id de las charlas con likes</param>
+    public void SetLikesExposition(List<int> indexLikes)
+    {
+        for(int i = 0; i < arrExposition.Count; i++)
+        {
+            arrExposition[i].isLiked = indexLikes.Any((id) => id == arrExposition[i].id);
+        }
+    }
+
+    public void setLikeExposition(Webservice.OnResponseCallback response = null)
     {
         Exposition expo = arrExposition.Single((ex) => ex.id == currExposition.id);
 
-        expo.isLiked = !expo.isLiked;
+        User u = new User();
+        u.id = AppManager.Instance.currUser.id;
+        u.email = AppManager.Instance.currUser.email;
+        u.idLikeExpositions = AppManager.Instance.currUser.idLikeExpositions;
 
-        // TODO Subir like a webservice
+        bool exists = u.idLikeExpositions.Any((l) => l == expo.id);
+
+        if (exists)
+        {
+            // Eliminar like
+            u.idLikeExpositions.Remove(expo.id);
+
+            Webservice.Instance.deleteLike(expo.id, (s, m) =>
+            {
+                if (s)
+                {
+                    expo.isLiked = !exists;
+
+                    AppManager.Instance.currUser = u;
+                }
+                else
+                {
+                    // Problemas con el servidor
+                }
+
+                if (response != null)
+                    response(s, m);
+            });
+        }
+        else
+        {
+            // Agregar like
+            u.idLikeExpositions.Add(expo.id);
+
+            Webservice.Instance.addLike(expo.id, (s, m) =>
+            {
+                if (s)
+                {
+                    expo.isLiked = !exists;
+
+                    AppManager.Instance.currUser = u;
+                }
+                else
+                {
+                    // Problemas con el servidor
+                }
+
+                if (response != null)
+                    response(s, m);
+            });
+        }
     }
 
     public Texture GetTextureExpositor()

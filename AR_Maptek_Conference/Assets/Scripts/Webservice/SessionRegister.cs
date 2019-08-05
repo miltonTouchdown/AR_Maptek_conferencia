@@ -12,12 +12,6 @@ public class SessionRegister : MonoBehaviour
         if (deletePlayerPref)
             PlayerPrefs.DeleteAll();
 #endif
-
-        // Cargar datos del usuario si es que ya esta registrado
-        if (PlayerPrefs.HasKey("Email"))
-        {
-           LoadUserData(PlayerPrefs.GetString("Email"));
-        }
     }
 
     public void RegisterUser(string email, Webservice.OnResponseCallback onFinish = null)
@@ -27,8 +21,10 @@ public class SessionRegister : MonoBehaviour
             if (r)
             {
                 // Guardar datos en playerpref
+                PlayerPrefs.SetString("Email", email);
 
-                // Guardar datos del usuario en appmanager
+                // Cambiar de escena
+                AppManager.Instance.LoadMainMenu();
             }
 
             if (onFinish != null)
@@ -36,14 +32,25 @@ public class SessionRegister : MonoBehaviour
         });
     }
 
-    public void LoadUserData(string email)
+    public bool LoadUserData()
     {
-        Webservice.Instance.registerUser(email, (r, m) =>
+        // Cargar datos del usuario si es que ya esta registrado
+        if (!PlayerPrefs.HasKey("Email"))
+            return false;
+
+        string email = "";
+
+        email = PlayerPrefs.GetString("Email");
+
+        Webservice.Instance.getUserData(email, (r, m) =>
         {
             if (r)
             {
-                // Guardar datos del usuario en appmanager
+                // Cambiar de escena
+                AppManager.Instance.LoadMainMenu();
             }
         });
+
+        return true;
     }
 }

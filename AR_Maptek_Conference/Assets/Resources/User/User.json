@@ -1,0 +1,21 @@
+{
+	"status": "OK",
+	"message": {
+			"id": "3",
+			"email": "milton@expo.cl",
+			"like_user": [
+					{
+						"id": "0"
+					},
+					{
+						"id": "2"
+					},
+					{
+						"id": "4"
+					},
+					{
+						"id": "5"
+					}
+			]
+	}
+}

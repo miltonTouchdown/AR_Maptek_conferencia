@@ -7,5 +7,5 @@ public class User
 {
     public int id;
     public string email;
-    public int[] idLikeExpositions; // Los "me gusta" guardados del usuario
+    public List<int> idLikeExpositions; // Los "me gusta" guardados del usuario
 }
