@@ -180,14 +180,37 @@ public class Webservice : MonoBehaviour
     }
 
     public void getConferenceData(OnResponseCallback response = null)
-    {     
-        FillConferenceData((s,m) =>
+    {
+        StartCoroutine(GetExpositions(response));
+    }
+
+    IEnumerator GetExpositions(OnResponseCallback response = null)
+    {
+        string uri = URL_API + url_exposition_api + "getExpositions.php";
+
+        string message = "";
+
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))
         {
-            if (s)
+            // Request and wait for the desired page.
+            yield return webRequest.SendWebRequest();
+
+            if (webRequest.responseCode < 400)
+                message = "";
+            else if (webRequest.responseCode >= 400 && webRequest.responseCode < 500)
+                message = "Charlas no encontradas";
+
+            if (webRequest.isNetworkError)
             {
-                response(true, "Datos conferencia correcto");
+                Debug.Log(": Error: " + webRequest.error);
+                if (response != null)
+                    response(false, message);
             }
-        });
+            else
+            {
+                FillConferenceData(webRequest.downloadHandler.text, response);
+            }
+        }
     }
 
     public Texture2D getTextureExpositor(OnResponseCallback response = null)
@@ -220,15 +243,10 @@ public class Webservice : MonoBehaviour
         AppManager.Instance.currUser = u;
     }
 
-    private void FillConferenceData(OnResponseCallback response = null)
+    private void FillConferenceData(string data, OnResponseCallback response = null)
     {
-        // Llenar datos conferencia en Conference Control
-
-        // Obtener conferencias
-        var expoJson = Resources.Load<TextAsset>("Conference/Expositions");
-
-        var n = JSON.Parse(expoJson.ToString());
-
+        var n = JSON.Parse(data);
+        //Debug.Log(n);
         List<Exposition> arrExpo = new List<Exposition>();
 
         for (int i = 0; i < n["message"].Count; i++)
@@ -236,7 +254,7 @@ public class Webservice : MonoBehaviour
             Exposition e = new Exposition();
 
             e.id = n["message"][i]["id"].AsInt;
-            e.day = DateTime.Parse(n["message"][i]["day"].Value);
+            e.date = DateTime.Parse(n["message"][i]["date"].Value);
             e.name_exposition = n["message"][i]["name_exposition"].Value;
             e.info_exposition = n["message"][i]["info_exposition"].Value;
             e.hour = n["message"][i]["hour"].Value;

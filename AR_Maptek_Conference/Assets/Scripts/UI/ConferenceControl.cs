@@ -63,9 +63,9 @@ public class ConferenceControl : MonoBehaviour
     /// <returns>Retorna un arreglo ordena por fechas de las charlas del dia especifico</returns>
     public Exposition[] GetExpositionsByDay(int day)
     {
-        List<Exposition> e = arrExposition.Where((exp) => (int)exp.day.Day == day).ToList();
+        List<Exposition> e = arrExposition.Where((exp) => (int)exp.date.Day == day).ToList();
 
-        return e.OrderByDescending( (d) => d.day).Reverse().ToArray();
+        return e.OrderByDescending( (d) => d.date).Reverse().ToArray();
     }
 
     /// <summary>
