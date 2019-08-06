@@ -60,12 +60,21 @@ public class Webservice : MonoBehaviour
         {
             yield return www.SendWebRequest();
 
+            string message = "";
+
+            if (www.responseCode < 400)
+                message = "";
+            else if(www.responseCode >= 400 && www.responseCode < 500)
+                message = "El usuario ingresado ya existe";
+            else
+                message = "Problemas en el servidor. Intente nuevamente";
+
             if (www.isNetworkError || www.isHttpError)
             {
                 Debug.Log(www.error);
 
                 if (response != null)
-                    response(false, www.error);
+                    response(false, message);
             }
             else
             {
@@ -74,15 +83,47 @@ public class Webservice : MonoBehaviour
                 FillUserData(www.downloadHandler.text);
 
                 if (response != null)
-                    response(true, "");
+                    response(true, message);
             }
         }
     }
 
     public void getUserData(string email, OnResponseCallback response = null)
     {
-        response(true, "Datos correcto");
-        //FillUserData();
+        StartCoroutine(GetUser(email, response));
+    }
+
+    IEnumerator GetUser(string email, OnResponseCallback response = null)
+    {
+        string uri = URL_API + url_user_api + "getUser.php?email=" + email;
+
+        string message = "";
+
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))
+        {
+            // Request and wait for the desired page.
+            yield return webRequest.SendWebRequest();
+
+            if (webRequest.responseCode < 400)
+                message = "";
+            else if (webRequest.responseCode >= 400 && webRequest.responseCode < 500)
+                message = "El usuario no existe";
+
+            if (webRequest.isNetworkError)
+            {
+                Debug.Log(": Error: " + webRequest.error);
+                if (response != null)
+                    response(false, message);
+            }
+            else
+            {
+                //Debug.Log(":\nReceived: " + webRequest.downloadHandler.text);
+                FillUserData(webRequest.downloadHandler.text);
+
+                if (response != null)
+                    response(true, message);
+            }
+        }
     }
 
     public void setUserData(User user, OnResponseCallback response = null)
@@ -129,7 +170,7 @@ public class Webservice : MonoBehaviour
 
         List<int> likes = new List<int>();
 
-        for (int i = 0; i < n["message"]["like_user"].Count; i++)
+        for (int i = 0; i < n["message"]["library"].Count; i++)
         {
             likes.Add(n["message"]["library"][i]["id"].AsInt);
         }

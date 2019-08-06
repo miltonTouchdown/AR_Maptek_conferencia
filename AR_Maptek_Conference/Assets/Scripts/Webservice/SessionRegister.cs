@@ -49,6 +49,10 @@ public class SessionRegister : MonoBehaviour
                 // Cambiar de escena
                 AppManager.Instance.LoadMainMenu();
             }
+            else
+            {
+                // TODO carga nuevamente o iniciar offline
+            }
         });
 
         return true;
