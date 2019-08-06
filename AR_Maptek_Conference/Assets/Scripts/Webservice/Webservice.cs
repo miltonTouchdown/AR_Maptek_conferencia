@@ -126,10 +126,10 @@ public class Webservice : MonoBehaviour
         }
     }
 
-    public void setUserData(User user, OnResponseCallback response = null)
-    {
-        response(true, "Datos correcto");
-    }
+    //public void setUserData(User user, OnResponseCallback response = null)
+    //{
+    //    response(true, "Datos correcto");
+    //}
 
     public void deleteLike(int idExpo, OnResponseCallback response = null)
     {
@@ -138,7 +138,44 @@ public class Webservice : MonoBehaviour
 
     public void addLike(int idExpo, OnResponseCallback response = null)
     {
-        response(false, "Datos correcto");
+        StartCoroutine(addExpoLibrary(AppManager.Instance.currUser.id, idExpo, response));
+    }
+
+    IEnumerator addExpoLibrary(int idUser, int idExpo, OnResponseCallback response = null)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("user_id", idUser);
+        form.AddField("expo_id", idExpo);
+
+        string url = URL_API + url_user_api + "addLike.php";
+
+        using (UnityWebRequest www = UnityWebRequest.Post(url, form))
+        {
+            yield return www.SendWebRequest();
+
+            string message = "";
+
+            if (www.responseCode < 400)
+                message = "";
+            else if (www.responseCode >= 400 && www.responseCode < 500)
+                message = "El usuario ingresado ya existe";
+            else
+                message = "Problemas en el servidor. Intente nuevamente";
+
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+
+                if (response != null)
+                    response(false, message);
+            }
+            else
+            {
+
+                if (response != null)
+                    response(true, message);
+            }
+        }
     }
 
     public void getConferenceData(OnResponseCallback response = null)
