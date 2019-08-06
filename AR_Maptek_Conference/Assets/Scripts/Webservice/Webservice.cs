@@ -213,11 +213,33 @@ public class Webservice : MonoBehaviour
         }
     }
 
-    public Texture2D getTextureExpositor(OnResponseCallback response = null)
+    public void getTextureExpositor(string url, Action<Texture2D> response = null)
     {
-        response(true, "Dato");
+        // TODO id de la charla
+        StartCoroutine(GetTexture(url, response));
+    }
 
-        return new Texture2D(2, 2, TextureFormat.ARGB32, false);
+    IEnumerator GetTexture(string url, Action<Texture2D> response = null)
+    {
+        using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(url))
+        {
+            yield return uwr.SendWebRequest();
+
+            if (uwr.isNetworkError || uwr.isHttpError)
+            {
+                Debug.Log(uwr.error);
+                if (response != null)
+                    response(null);
+            }
+            else
+            {
+                // Get downloaded asset bundle
+                var texture = DownloadHandlerTexture.GetContent(uwr);
+
+                if (response != null)
+                    response(texture);
+            }
+        }
     }
 
     /// <summary>

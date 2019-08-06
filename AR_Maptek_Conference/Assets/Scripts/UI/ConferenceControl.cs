@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -137,16 +138,8 @@ public class ConferenceControl : MonoBehaviour
         }
     }
 
-    public Texture GetTextureExpositor()
+    public void GetTextureExpositor(Action<Texture2D> action)
     {
-        // Cargar textura desde webservice
-
-        Texture2D t = new Texture2D(2, 2, TextureFormat.ARGB32, false);
-
-        Exposition expo = arrExposition.Single((ex) => ex.id == currExposition.id);
-
-        expo.photo_expositor = t;
-
-        return t;
+        Webservice.Instance.getTextureExpositor(currExposition.url_photo_expositor, action);
     }
 }

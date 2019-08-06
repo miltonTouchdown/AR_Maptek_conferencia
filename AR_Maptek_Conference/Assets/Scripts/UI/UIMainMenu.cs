@@ -32,6 +32,7 @@ public class UIMainMenu : MonoBehaviour
 
     public TextMeshProUGUI aboutExpositor;
     public RawImage rawimgExpositor;
+    public Texture2D profileDefault;
 
     private PopUp _popUp;
 
@@ -141,8 +142,26 @@ public class UIMainMenu : MonoBehaviour
         viewExpositor.setActiveWindow(true);
 
         aboutExpositor.text = ConferenceControl.Instance.currExposition.info_expositor;
-        rawimgExpositor.texture = (ConferenceControl.Instance.currExposition.photo_expositor != null) ?
-            ConferenceControl.Instance.currExposition.photo_expositor : ConferenceControl.Instance.GetTextureExpositor();
+
+        // Obtener imagen de perfil del expositor
+        if (ConferenceControl.Instance.currExposition.photo_expositor != null)
+        {
+            rawimgExpositor.texture = (Texture2D)ConferenceControl.Instance.currExposition.photo_expositor;
+        }
+        else
+        {
+            ConferenceControl.Instance.GetTextureExpositor((t) => 
+            {
+                if(t != null)
+                {
+                    rawimgExpositor.texture = t;
+                }
+                else
+                {
+                    rawimgExpositor.texture = profileDefault;
+                }
+            });         
+        }     
     }
 
     public void Back()
