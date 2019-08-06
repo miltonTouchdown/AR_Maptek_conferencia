@@ -3,9 +3,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class Webservice : MonoBehaviour
 {
+    public string URL_API;
+    public string url_user_api;
+    public string url_exposition_api;
+
     private static Webservice _instace;
     public static Webservice Instance
     {
@@ -41,14 +46,43 @@ public class Webservice : MonoBehaviour
 
     public void registerUser(string email, OnResponseCallback response = null)
     {
-        response(true, "registro correcto");
-        FillUserData();
+        StartCoroutine(Register(email, response));
+    }
+
+    IEnumerator Register(string email, OnResponseCallback response = null)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("email", email);
+
+        string url = URL_API + url_user_api + "register.php";
+
+        using (UnityWebRequest www = UnityWebRequest.Post(url, form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+
+                if (response != null)
+                    response(false, www.error);
+            }
+            else
+            {
+                //Debug.Log(www.downloadHandler.text);
+
+                FillUserData(www.downloadHandler.text);
+
+                if (response != null)
+                    response(true, "");
+            }
+        }
     }
 
     public void getUserData(string email, OnResponseCallback response = null)
     {
         response(true, "Datos correcto");
-        FillUserData();
+        //FillUserData();
     }
 
     public void setUserData(User user, OnResponseCallback response = null)
@@ -87,14 +121,9 @@ public class Webservice : MonoBehaviour
     /// <summary>
     /// Llenar datos del usuario
     /// </summary>
-    private void FillUserData()
+    private void FillUserData(string data)
     {
-        // LLenar datos usuario en Appmanager
-
-        // Obtener usuario
-        var userJson = Resources.Load<TextAsset>("User/User");
-
-        var n = JSON.Parse(userJson.ToString());
+        var n = JSON.Parse(data);
 
         User u = new User();
 
@@ -102,7 +131,7 @@ public class Webservice : MonoBehaviour
 
         for (int i = 0; i < n["message"]["like_user"].Count; i++)
         {
-            likes.Add(n["message"]["like_user"][i]["id"].AsInt);
+            likes.Add(n["message"]["library"][i]["id"].AsInt);
         }
 
         u.id = n["message"]["id"].AsInt;
