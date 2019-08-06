@@ -126,29 +126,30 @@ public class Webservice : MonoBehaviour
         }
     }
 
-    //public void setUserData(User user, OnResponseCallback response = null)
-    //{
-    //    response(true, "Datos correcto");
-    //}
-
     public void deleteLike(int idExpo, OnResponseCallback response = null)
     {
-        response(false, "Datos correcto");
+        WWWForm form = new WWWForm();
+        form.AddField("user_id", AppManager.Instance.currUser.id);
+        form.AddField("expo_id", idExpo);
+
+        string url = URL_API + url_user_api + "deleteLike.php";
+
+        StartCoroutine(PostLibrary(form, url, response));
     }
 
     public void addLike(int idExpo, OnResponseCallback response = null)
     {
-        StartCoroutine(addExpoLibrary(AppManager.Instance.currUser.id, idExpo, response));
-    }
-
-    IEnumerator addExpoLibrary(int idUser, int idExpo, OnResponseCallback response = null)
-    {
         WWWForm form = new WWWForm();
-        form.AddField("user_id", idUser);
+        form.AddField("user_id", AppManager.Instance.currUser.id);
         form.AddField("expo_id", idExpo);
 
         string url = URL_API + url_user_api + "addLike.php";
 
+        StartCoroutine(PostLibrary(form, url, response));
+    }
+
+    IEnumerator PostLibrary(WWWForm form, string url, OnResponseCallback response = null)
+    {
         using (UnityWebRequest www = UnityWebRequest.Post(url, form))
         {
             yield return www.SendWebRequest();
