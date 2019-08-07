@@ -5,9 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class AppManager : MonoBehaviour
 {
+    [Header("Global UI")]
     public GameObject loadingScreen;
 
+    [Header("User")]
     public User currUser = null;
+
+    [Header("Email data")]
+    public string emailTo;
+    public string subject;
+    public string body;
 
     private UIMainMenu _UIMainMenu = null;
     private SessionRegister _sessionRegister = null;
@@ -144,6 +151,13 @@ public class AppManager : MonoBehaviour
 
         if (onFinish != null)
             onFinish();
+    }
+
+    public void SendEmail()
+    {
+        body = body.Replace("@NameExposition","'"+ConferenceControl.Instance.currExposition.name_exposition+ "'");
+
+        SenderEmail.SendEmail(emailTo, subject, body);
     }
 
     public delegate void OnFinishCallback();

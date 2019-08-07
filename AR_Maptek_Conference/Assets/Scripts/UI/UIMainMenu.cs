@@ -34,6 +34,9 @@ public class UIMainMenu : MonoBehaviour
     public RawImage rawimgExpositor;
     public Texture2D profileDefault;
 
+    [Header("Email Notification")]
+    public WindowMovement viewEmailNotification;
+
     private PopUp _popUp;
 
     void Start ()
@@ -124,10 +127,16 @@ public class UIMainMenu : MonoBehaviour
         {
             if (s)
             {
-                imgLike.color = (ConferenceControl.Instance.currExposition.isLiked) ? colorMaptek : Color.white;
-
-                // TODO: Si es true entonces mostrar mensaje para enviar mail
-
+                if (ConferenceControl.Instance.currExposition.isLiked)
+                {
+                    imgLike.color = colorMaptek;
+                    ShowEmailNotification();
+                }
+                else
+                {
+                    imgLike.color = Color.white;
+                    HideEmailNotification();
+                }                                                 
             }
             else
             {
@@ -176,6 +185,7 @@ public class UIMainMenu : MonoBehaviour
         if (viewCharla.isActive)
         {
             viewCharla.setActiveWindow(false);
+            HideEmailNotification();
 
             ConferenceControl.Instance.currExposition.isOpen = false;
             ConferenceControl.Instance.currExposition = null;
@@ -196,5 +206,25 @@ public class UIMainMenu : MonoBehaviour
         textFormat = textFormat.Replace("@NameExpositor", expo.name_expositor);
 
         return textFormat;
+    }
+
+    public void ShowEmailNotification()
+    {
+        viewEmailNotification.setActiveWindow(true);
+    }
+
+    public void HideEmailNotification()
+    {
+        viewEmailNotification.setActiveWindow(false);
+    }
+
+    public void OnClickEmailNotification()
+    {
+        if (!viewEmailNotification.isActive || !ConferenceControl.Instance.currExposition.isOpen)
+            return;
+
+        HideEmailNotification();
+
+        AppManager.Instance.SendEmail();
     }
 }

@@ -558,6 +558,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5911054482804614620, guid: a873b221b8f80274d8c851211f6bed09,
+        type: 3}
+      propertyPath: emailTo
+      value: gamer.metalero@gmail.com
+      objectReference: {fileID: 0}
+    - target: {fileID: 5911054482804614620, guid: a873b221b8f80274d8c851211f6bed09,
+        type: 3}
+      propertyPath: body
+      value: Estoy interesado en @NameExposition
+      objectReference: {fileID: 0}
+    - target: {fileID: 5911054482804614620, guid: a873b221b8f80274d8c851211f6bed09,
+        type: 3}
+      propertyPath: subject
+      value: XIX Conferencia de Usuarios - Contacto
+      objectReference: {fileID: 0}
     - target: {fileID: 5911054482804614618, guid: a873b221b8f80274d8c851211f6bed09,
         type: 3}
       propertyPath: isLoadConference
