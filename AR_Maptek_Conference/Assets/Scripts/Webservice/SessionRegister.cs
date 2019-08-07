@@ -28,7 +28,7 @@ public class SessionRegister : MonoBehaviour
             }
 
             if (onFinish != null)
-                onFinish.Invoke(r, m);
+                onFinish(r, m);
         });
     }
 

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main_menu_scene.unity
     guid: b67aebfc5ee110f4897c3e3829404ced
+  - enabled: 0
+    path: Assets/Scenes/Examples/email_sender_scene.unity
+    guid: 22f28309cd1e4a04e9fd74815bc3a944
   m_configObjects: {}

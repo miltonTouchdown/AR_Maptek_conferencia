@@ -4,6 +4,10 @@
     package="com.unity3d.player"
     xmlns:tools="http://schemas.android.com/tools"
     android:installLocation="preferExternal">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  
     <supports-screens
         android:smallScreens="true"
         android:normalScreens="true"
