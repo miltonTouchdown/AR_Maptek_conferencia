@@ -34,7 +34,7 @@ public class ARManager : MonoBehaviour
             Destroy(this);
         }
 
-        currExpoData = AppManager.Instance.GetExpoSelected();//GeneralManager.GetPubSelected();
+        currExpoData = AppManager.Instance.GetExpoSelected();
 
         LoadSceneTrackers();
     }

@@ -276,7 +276,7 @@ PrefabInstance:
     - target: {fileID: 224530600142310156, guid: e20b0c8259fe12b438eeb54655245c12,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.00024414062
       objectReference: {fileID: 0}
     - target: {fileID: 224530600142310156, guid: e20b0c8259fe12b438eeb54655245c12,
         type: 3}
@@ -933,8 +933,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130, y: -0.000038146973}
-  m_SizeDelta: {x: 121, y: -78.8}
+  m_AnchoredPosition: {x: 149.2, y: -0.000030517578}
+  m_SizeDelta: {x: 159.4, y: -78.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &221782957
 MonoBehaviour:
@@ -1011,7 +1011,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 6319f5a685776064b94a553f0fe9b799, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1532,7 +1532,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 1
+  m_FlexibleHeight: 0.63
   m_LayoutPriority: 1
 --- !u!114 &363510697
 MonoBehaviour:
@@ -2215,7 +2215,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 1
+  m_FlexibleHeight: 0.63
   m_LayoutPriority: 1
 --- !u!114 &549474417
 MonoBehaviour:
@@ -4874,7 +4874,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 0.17
+  m_FlexibleHeight: 0.07
   m_LayoutPriority: 1
 --- !u!114 &1221630429
 MonoBehaviour:
@@ -5114,8 +5114,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130, y: -0.000030517578}
-  m_SizeDelta: {x: 121, y: -78.8}
+  m_AnchoredPosition: {x: 149.2, y: -0.000030517578}
+  m_SizeDelta: {x: 159.4, y: -78.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1386189062
 MonoBehaviour:
@@ -5192,7 +5192,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 6319f5a685776064b94a553f0fe9b799, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -5450,7 +5450,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 0.1
+  m_FlexibleHeight: 0.07
   m_LayoutPriority: 1
 --- !u!114 &1431534013
 MonoBehaviour:
@@ -6411,7 +6411,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 1
+  m_FlexibleHeight: 0.63
   m_LayoutPriority: 1
 --- !u!114 &1624464611
 MonoBehaviour:
@@ -6716,7 +6716,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 0.35
+  m_FlexibleHeight: 0.3
   m_LayoutPriority: 1
 --- !u!114 &1732003955
 MonoBehaviour:
@@ -6824,7 +6824,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 0.1
+  m_FlexibleHeight: 0.07
   m_LayoutPriority: 1
 --- !u!114 &1829668853
 MonoBehaviour:
@@ -7472,7 +7472,7 @@ PrefabInstance:
     - target: {fileID: 224530600142310156, guid: e20b0c8259fe12b438eeb54655245c12,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000061035156
+      value: -0.00018310547
       objectReference: {fileID: 0}
     - target: {fileID: 224530600142310156, guid: e20b0c8259fe12b438eeb54655245c12,
         type: 3}
@@ -7785,7 +7785,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 0.5
+  m_FlexibleHeight: 0.3
   m_LayoutPriority: 1
 --- !u!114 &2085357147
 MonoBehaviour:
