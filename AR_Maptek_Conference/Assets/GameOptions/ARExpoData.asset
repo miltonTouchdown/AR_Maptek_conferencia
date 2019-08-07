@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab709c25076033f46b9be09cffa5815f, type: 3}
+  m_Name: ARExpoData
+  m_EditorClassIdentifier: 
+  expos:
+  - expoName: Maptek
+    idExpo: 0
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 1657185106805392, guid: 7ffb4e3c1c6fadf4695808de4350e378, type: 3}
+  - expoName: Exponor
+    idExpo: 1
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 1657185106805392, guid: 41d902bf299601245aa3411ed1c8680d, type: 3}

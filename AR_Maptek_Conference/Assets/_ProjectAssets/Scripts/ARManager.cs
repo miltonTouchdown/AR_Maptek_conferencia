@@ -7,7 +7,7 @@ public class ARManager : MonoBehaviour
 {
     public TrophiesImageTarget activeTracker;
 
-    private PubDataContainer.PubData currPubData;
+    private ExpoDataContainer.ExpoData currExpoData;
     private ARMenu _ARMenu;
 
     private static ARManager _instance;
@@ -23,10 +23,6 @@ public class ARManager : MonoBehaviour
         }
     }
 
-#if UNITY_EDITOR
-    public string testPubName;
-#endif
-
     private void Awake()
     {
         if(_instance == null)
@@ -38,11 +34,8 @@ public class ARManager : MonoBehaviour
             Destroy(this);
         }
 
-        currPubData = GeneralManager.GetPubSelected();
+        currExpoData = AppManager.Instance.GetExpoSelected();//GeneralManager.GetPubSelected();
 
-#if UNITY_EDITOR
-        if(currPubData == null) currPubData = GeneralManager.SelectPub(testPubName);
-#endif
         LoadSceneTrackers();
     }
 
@@ -65,12 +58,12 @@ public class ARManager : MonoBehaviour
 
     public void GoBack()
     {
-        SceneManager.LoadScene(GeneralManager.SceneMenuIndex);
+        AppManager.Instance.LoadMainMenu();
     }
 
     void LoadSceneTrackers()
     {
-        foreach (GameObject currPrefab in currPubData.trackersPrefab)
+        foreach (GameObject currPrefab in currExpoData.trackersPrefab)
         {
             Instantiate(currPrefab);
         }

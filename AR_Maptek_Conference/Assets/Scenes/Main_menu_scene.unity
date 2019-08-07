@@ -276,7 +276,7 @@ PrefabInstance:
     - target: {fileID: 224530600142310156, guid: e20b0c8259fe12b438eeb54655245c12,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00012207031
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224530600142310156, guid: e20b0c8259fe12b438eeb54655245c12,
         type: 3}
@@ -5704,6 +5704,7 @@ MonoBehaviour:
   aboutCharla: {fileID: 2027364346}
   bttnLike: {fileID: 156769657}
   imgLike: {fileID: 668359558}
+  bttnAR: {fileID: 615194620}
   viewExpositor: {fileID: 188272938}
   aboutExpositor: {fileID: 90047365}
   rawimgExpositor: {fileID: 614722128}
@@ -7471,7 +7472,7 @@ PrefabInstance:
     - target: {fileID: 224530600142310156, guid: e20b0c8259fe12b438eeb54655245c12,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00012207031
+      value: 0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 224530600142310156, guid: e20b0c8259fe12b438eeb54655245c12,
         type: 3}

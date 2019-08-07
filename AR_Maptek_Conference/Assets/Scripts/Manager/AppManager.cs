@@ -16,6 +16,10 @@ public class AppManager : MonoBehaviour
     public string subject;
     public string body;
 
+    [Header("AR")]
+    public ExpoDataContainer expoData;
+    private ExpoDataContainer.ExpoData expoSelected;
+
     private UIMainMenu _UIMainMenu = null;
     private SessionRegister _sessionRegister = null;
     private PopUp _popUp = null;
@@ -61,16 +65,9 @@ public class AppManager : MonoBehaviour
         }
     }
 
-    public void DownloadDataConference()
-    {
-
-    }
-
-    public void DownloadDataUser()
-    {
-
-    }
-
+    /// <summary>
+    /// Cargar escene Menu principal
+    /// </summary>
     public void LoadMainMenu()
     {
         loadingScreen.SetActive(true);
@@ -116,6 +113,28 @@ public class AppManager : MonoBehaviour
         });
     }
 
+    /// <summary>
+    /// Cargar escena AR
+    /// </summary>
+    public void LoadSceneAR()
+    {
+        if (!HasExpoAR(ConferenceControl.Instance.currExposition.id))
+            return;
+
+        SelectExpoById(ConferenceControl.Instance.currExposition.id);
+
+        loadingScreen.SetActive(true);
+
+        // Cargar escena AR
+        LoadScene(2, () =>
+        {
+            LeanTween.delayedCall(.3f, () =>
+            {
+                loadingScreen.SetActive(false);
+            });         
+        });
+    }
+
     public void LoadRegisterMenu()
     {
         LoadScene(0, ()=>
@@ -129,6 +148,7 @@ public class AppManager : MonoBehaviour
         });
     }
 
+    #region Load_Scene
     public void LoadScene(int index, OnFinishCallback onFinish = null)
     {
         //loadingScreen.SetActive(true);
@@ -152,13 +172,62 @@ public class AppManager : MonoBehaviour
         if (onFinish != null)
             onFinish();
     }
+    #endregion
 
+    #region Email_Sender
     public void SendEmail()
     {
         body = body.Replace("@NameExposition","'"+ConferenceControl.Instance.currExposition.name_exposition+ "'");
 
         SenderEmail.SendEmail(emailTo, subject, body);
     }
+    #endregion
+
+    #region AR
+    public ExpoDataContainer.ExpoData GetExpoSelected()
+    {
+        ExpoDataContainer.ExpoData expoData = expoSelected;
+
+        if (expoData == null || expoData.expoName == null || expoData.expoName.CompareTo("") == 0)
+        {
+            return null;
+        }
+        else
+        {
+            return expoData;
+        }
+    }
+
+    public void SelectExpoByName(string expoName)
+    {
+        ExpoDataContainer.ExpoData expo = expoData.GetExpo(expoName);
+
+        if (expo != null)
+        {
+            expoSelected = expo;
+        }
+    }
+
+    public void SelectExpoById(int idExpo)
+    {
+        ExpoDataContainer.ExpoData expo = expoData.GetExpoById(idExpo);
+
+        if (expo != null)
+        {
+            expoSelected = expo;
+        }
+    }
+
+    /// <summary>
+    /// Indica si la charla tiene realidad aumentada
+    /// </summary>
+    /// <param name="idExpo">id de la charla</param>
+    /// <returns></returns>
+    public bool HasExpoAR(int idExpo)
+    {
+        return expoData.HasExpo(idExpo);
+    }
+    #endregion
 
     public delegate void OnFinishCallback();
     public static event OnFinishCallback onFinish;

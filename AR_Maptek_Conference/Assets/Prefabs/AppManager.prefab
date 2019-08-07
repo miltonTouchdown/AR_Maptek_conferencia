@@ -874,6 +874,10 @@ MonoBehaviour:
     id: 0
     email: 
     idLikeExpositions: 
+  emailTo: gamer.metalero@gmail.com
+  subject: XIX Conferencia de Usuarios - Contacto
+  body: Estoy interesado en @NameExposition
+  expoData: {fileID: 11400000, guid: 753367aa2da630b479de35ed4cf342fa, type: 2}
 --- !u!114 &5911054482804614618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -912,6 +916,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 177e39eda9de5cd468c5322e44ac675d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  URL_API: http://www.constructoracalafate.com/conferencia_maptek/api/
+  url_user_api: user/
+  url_exposition_api: exposition/
 --- !u!1001 &509884078
 PrefabInstance:
   m_ObjectHideFlags: 0

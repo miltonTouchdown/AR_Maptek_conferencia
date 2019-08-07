@@ -27,6 +27,8 @@ public class UIMainMenu : MonoBehaviour
     public Button bttnLike;
     public Image imgLike;
 
+    public Button bttnAR;
+
     [Header("Expositor")]
     public WindowMovement viewExpositor;
 
@@ -113,6 +115,15 @@ public class UIMainMenu : MonoBehaviour
 
     public void ShowCharlaInformation()
     {
+        bool hasAR = AppManager.Instance.HasExpoAR(ConferenceControl.Instance.currExposition.id);
+
+        // Configurar boton AR
+        bttnAR.onClick.RemoveAllListeners();
+        bttnAR.interactable = hasAR;
+        
+        if(hasAR)
+            bttnAR.onClick.AddListener(() => { AppManager.Instance.LoadSceneAR(); });
+
         viewCharla.setActiveWindow(true);
 
         imgLike.color = (ConferenceControl.Instance.currExposition.isLiked) ? colorMaptek : Color.white;
