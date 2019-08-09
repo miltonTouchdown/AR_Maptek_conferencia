@@ -43,10 +43,15 @@ public class ARMenu : MonoBehaviour
 
         ModelTarget[] modelsTarget = modelControl.modelsTarget;
 
+        // Obtener largo de acuerdo a la cantidad de botones
+        float bttWidth = getButtonWidth(modelsTarget.Length);
+
         foreach (ModelTarget m in modelsTarget)
         {
             ButtonTarget bttnTarget = Instantiate(prefBttonSelect, ContentBttns).GetComponent<ButtonTarget>();
             bttnTarget.setListenerButton(modelControl, m);
+
+            bttnTarget.GetComponent<LayoutElement>().preferredWidth = bttWidth;
         }
     }
 
@@ -138,5 +143,19 @@ public class ARMenu : MonoBehaviour
                     break;
                 }
         }
+    }
+
+    /// <summary>
+    /// Obtener largo de botones de acuerdo a la cantidad de modelos
+    /// </summary>
+    /// <param name="countModel">cantidad de modelos</param>
+    /// <returns></returns>
+    private float getButtonWidth(int countModel)
+    {
+        // Los valores son manuales
+
+        float width = (countModel > 4) ? 180f : (800 / countModel);
+
+        return width;
     }
 }

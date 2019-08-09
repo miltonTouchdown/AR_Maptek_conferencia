@@ -72,7 +72,7 @@ public class UIMainMenu : MonoBehaviour
         {
             bttnToday = bttnDayTwo;
         }
-        if (today >= 23)
+        if (today >= 22)
         {
             bttnToday = bttnDayThree;
         }
