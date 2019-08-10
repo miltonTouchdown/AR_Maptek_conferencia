@@ -99,17 +99,38 @@ public class UIMainMenu : MonoBehaviour
         {
             Button bttn = Instantiate(prefCharlaGloblInfo, contentInfo).GetComponent<Button>();
 
-            // TODO Agregar listener a botones para cambiar de vista
-            bttn.onClick.AddListener(() => 
+            // Para diferenciar una charla de una que no es verificar si tiene informacion.
+            // Si no tiene informacion entonces no es una charla
+            if (!string.IsNullOrEmpty(e.info_exposition))
             {
-                ConferenceControl.Instance.currExposition = e;
-                ConferenceControl.Instance.currExposition.isOpen = true;
+                // Es una charla
 
-                ShowCharlaInformation();
-            });
+                // listener a botones para cambiar de vista
+                bttn.onClick.AddListener(() =>
+                {
+                    ConferenceControl.Instance.currExposition = e;
+                    ConferenceControl.Instance.currExposition.isOpen = true;
 
-            // Cambiar texto informacion
-            bttn.GetComponentInChildren<TextMeshProUGUI>().text = getFormatStringInfo(e);
+                    ShowCharlaInformation();
+                });
+
+                // Activar imagen flecha
+                bttn.transform.Find("arrow").gameObject.SetActive(true);
+
+                // Cambiar texto informacion
+                bttn.GetComponentInChildren<TextMeshProUGUI>().text = getFormatStringInfo(e);
+            }
+            else
+            {
+                // No es charla. Solo informativo.
+
+                bttn.onClick.RemoveAllListeners();
+
+                bttn.transform.Find("arrow").gameObject.SetActive(false);
+
+                // Cambiar texto informacion
+                bttn.GetComponentInChildren<TextMeshProUGUI>().text = getFormatStringInfo(e);
+            }
         }
     }
 
