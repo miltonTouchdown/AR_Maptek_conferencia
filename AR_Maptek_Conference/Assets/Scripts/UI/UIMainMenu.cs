@@ -64,11 +64,15 @@ public class UIMainMenu : MonoBehaviour
 
         Button bttnToday = null;
 
+        bttnDayOne.transform.Find("bar").GetComponent<Image>().color = colorMaptek;
+        bttnDayTwo.transform.Find("bar").GetComponent<Image>().color = colorMaptek;
+        bttnDayThree.transform.Find("bar").GetComponent<Image>().color = colorMaptek;
+
         if (today <= 20)
         {
             bttnToday = bttnDayOne;
         }
-        if(today == 21)
+        if (today == 21)
         {
             bttnToday = bttnDayTwo;
         }
@@ -77,11 +81,33 @@ public class UIMainMenu : MonoBehaviour
             bttnToday = bttnDayThree;
         }
 
+        bttnToday.transform.Find("bar").GetComponent<Image>().color = Color.white;
         bttnToday.GetComponent<Image>().color = colorMaptek;
         bttnToday.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
 
         // Cargar charlas del dia
-        bttnToday.onClick.Invoke();
+        if (ConferenceControl.Instance.currExposition.isOpen)
+        {
+            Exposition e = ConferenceControl.Instance.currExposition;
+            Button b = null;
+
+            if (e.date.Day <= 20)
+                b = bttnDayOne; ;
+
+            if (e.date.Day == 21)
+                b = bttnDayOne;
+
+            if (e.date.Day >= 22)
+                b = bttnDayOne;
+
+            b.onClick.Invoke();
+            b.Select();
+        }
+        else
+        {
+            bttnToday.onClick.Invoke();
+            bttnToday.Select();
+        }
     }
 
     public void ShowCharlasByDay(int day)
