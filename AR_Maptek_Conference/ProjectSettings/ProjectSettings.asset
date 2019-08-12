@@ -246,8 +246,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/admin/Documents/Trophies/keystores/trophies2.keystore
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: D:/Projects/Unity Projects/AR_Maptek_conferencia/maptekxix.keystore
+  AndroidKeyaliasName: maptek xix
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
