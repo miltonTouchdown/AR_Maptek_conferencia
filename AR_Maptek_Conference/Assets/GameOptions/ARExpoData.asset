@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   expos:
   - expoName: Maptek
-    idExpo: 1
+    idExpo: 3
     hasDefinedARScene: 0
     definedARScene: 0
     expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
     trackersPrefab:
     - {fileID: 1657185106805392, guid: 7ffb4e3c1c6fadf4695808de4350e378, type: 3}
   - expoName: Exponor
-    idExpo: 2
+    idExpo: 4
     hasDefinedARScene: 0
     definedARScene: 0
     expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}

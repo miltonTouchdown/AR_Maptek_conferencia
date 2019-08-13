@@ -172,8 +172,11 @@ public class UIMainMenu : MonoBehaviour
         // Configurar boton AR
         bttnAR.onClick.RemoveAllListeners();
         bttnAR.interactable = hasAR;
-        
-        if(hasAR)
+        // Cambiar color de icono y letras si esta desactivado
+        bttnAR.transform.Find("icon").GetComponent<Image>().color = (hasAR) ? colorMaptek : Color.gray;
+        bttnAR.GetComponentInChildren<TextMeshProUGUI>().color = (hasAR) ? colorMaptek : Color.gray;
+
+        if (hasAR)
             bttnAR.onClick.AddListener(() => { AppManager.Instance.LoadSceneAR(); });
 
         viewCharla.setActiveWindow(true);
@@ -263,12 +266,19 @@ public class UIMainMenu : MonoBehaviour
 
     private string getFormatStringInfo(Exposition expo)
     {
-        string textFormat = "<size=80%>@NameExposition\n\n<size=60%>@Hour\n<size=60%><color=#3fcf4e>Room @Room</color>\n<size=100%><b>@NameExpositor";
+        //string textFormat = "<size=80%>@NameExposition\n\n<size=60%>@Hour\n<size=60%><color=#3fcf4e>Room @Room</color>\n<size=100%><b>@NameExpositor";
+        // TODO Cambiar formato
+        string textFormat = "<line-height=70%><size=90%>@NameExposition\n\n<line-height=50%><size=80%><color=#3fcf4e>@Hour\n<size=60%>Room @Room</color>\n\n<line-height=100%><size=100%><b>@NameExpositor";
 
         textFormat = textFormat.Replace("@NameExposition", expo.name_exposition);
         textFormat = textFormat.Replace("@Hour", expo.hour);
         textFormat = textFormat.Replace("@Room", expo.room);
         textFormat = textFormat.Replace("@NameExpositor", expo.name_expositor);
+
+        if (String.IsNullOrEmpty(expo.room))
+        {
+            textFormat = textFormat.Replace("Room", "");
+        }
 
         return textFormat;
     }

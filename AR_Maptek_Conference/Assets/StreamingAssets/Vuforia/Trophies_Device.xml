@@ -2,5 +2,6 @@
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
     <ImageTarget name="mousepad" size="25.000000 20.803249" />
+    <ImageTarget name="Target_Maptek" size="0.500000 0.708255" />
   </Tracking>
 </QCARConfig>

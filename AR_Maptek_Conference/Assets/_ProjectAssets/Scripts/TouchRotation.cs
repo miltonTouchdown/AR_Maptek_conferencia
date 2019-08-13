@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TouchRotation : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class TouchRotation : MonoBehaviour
             return;
 
 #if UNITY_ANDROID || UNITY_IOS
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && !EventSystem.current.IsPointerOverGameObject(0))
         {
             Touch touch = Input.GetTouch(0);
             
