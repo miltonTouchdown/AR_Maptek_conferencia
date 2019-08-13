@@ -16,7 +16,7 @@ public class PerformanceChecker : MonoBehaviour
 
     // Tiempo de espera para empezar a mostrar la alerta. 
     // Inicialmente siempre se empieza con bajo FPS por lo que se debe esperar hasta que se estabilice.
-    private float _timeActiveAlert = 2f;
+    private float _timeActiveAlert = 5f;
 
     public string formatedString = "{value} FPS";
     public Text txtFps;

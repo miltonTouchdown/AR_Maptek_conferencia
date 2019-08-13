@@ -874,7 +874,7 @@ MonoBehaviour:
     id: 0
     email: 
     idLikeExpositions: 
-  emailTo: gamer.metalero@gmail.com
+  emailTo: info@maptek.cl
   subject: XIX Conferencia de Usuarios - Contacto
   body: Estoy interesado en @NameExposition
   expoData: {fileID: 11400000, guid: 753367aa2da630b479de35ed4cf342fa, type: 2}

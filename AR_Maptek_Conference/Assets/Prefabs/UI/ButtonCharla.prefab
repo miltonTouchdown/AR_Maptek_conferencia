@@ -174,7 +174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -175, y: -106}
+  m_AnchoredPosition: {x: -150, y: -106}
   m_SizeDelta: {x: 75.2, y: -610.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &42697061334593995
@@ -384,7 +384,7 @@ PrefabInstance:
     - target: {fileID: 114031256924828262, guid: e20b0c8259fe12b438eeb54655245c12,
         type: 3}
       propertyPath: m_margin.x
-      value: 100
+      value: 190
       objectReference: {fileID: 0}
     - target: {fileID: 114031256924828262, guid: e20b0c8259fe12b438eeb54655245c12,
         type: 3}
@@ -394,7 +394,7 @@ PrefabInstance:
     - target: {fileID: 114031256924828262, guid: e20b0c8259fe12b438eeb54655245c12,
         type: 3}
       propertyPath: m_margin.z
-      value: 100
+      value: 190
       objectReference: {fileID: 0}
     - target: {fileID: 114031256924828262, guid: e20b0c8259fe12b438eeb54655245c12,
         type: 3}
@@ -419,7 +419,7 @@ PrefabInstance:
     - target: {fileID: 114031256924828262, guid: e20b0c8259fe12b438eeb54655245c12,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 7
+      value: 124
       objectReference: {fileID: 0}
     - target: {fileID: 114031256924828262, guid: e20b0c8259fe12b438eeb54655245c12,
         type: 3}
@@ -430,6 +430,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114031256924828262, guid: e20b0c8259fe12b438eeb54655245c12,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e20b0c8259fe12b438eeb54655245c12, type: 3}

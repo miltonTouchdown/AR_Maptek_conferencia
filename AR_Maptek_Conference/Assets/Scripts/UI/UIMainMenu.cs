@@ -21,6 +21,7 @@ public class UIMainMenu : MonoBehaviour
 
     [Header("Charla")]
     public WindowMovement viewCharla;
+    public ScrollRect scrollRect;
     public TextMeshProUGUI titleCharla;
     public TextMeshProUGUI aboutCharla;
 
@@ -158,6 +159,10 @@ public class UIMainMenu : MonoBehaviour
                 bttn.GetComponentInChildren<TextMeshProUGUI>().text = getFormatStringInfo(e);
             }
         }
+
+        Canvas.ForceUpdateCanvases();
+
+        scrollRect.verticalNormalizedPosition = 1f;
     }
 
     public void ShowCharlaInformation()
@@ -244,6 +249,8 @@ public class UIMainMenu : MonoBehaviour
         {
             viewCharla.setActiveWindow(false);
             HideEmailNotification();
+
+            rawimgExpositor.texture = profileDefault;
 
             ConferenceControl.Instance.currExposition.isOpen = false;
             ConferenceControl.Instance.currExposition = null;
