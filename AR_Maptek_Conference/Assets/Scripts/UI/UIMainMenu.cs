@@ -187,18 +187,24 @@ public class UIMainMenu : MonoBehaviour
 
     public void setLikeCharla()
     {
+        // Guardar color
+        Color temp = (ConferenceControl.Instance.currExposition.isLiked) ? colorMaptek : Color.white;
+
+        // Cambiar color inmediatamente. Si existe alguna falla en el servidor se regresa a su color anterior
+        imgLike.color = (!ConferenceControl.Instance.currExposition.isLiked) ? colorMaptek : Color.white;
+
         ConferenceControl.Instance.setLikeExposition((s, m) =>
         {
             if (s)
             {
                 if (ConferenceControl.Instance.currExposition.isLiked)
                 {
-                    imgLike.color = colorMaptek;
+                    //imgLike.color = colorMaptek;
                     ShowEmailNotification();
                 }
                 else
                 {
-                    imgLike.color = Color.white;
+                    //imgLike.color = Color.white;
                     HideEmailNotification();
                 }                                                 
             }
@@ -206,6 +212,7 @@ public class UIMainMenu : MonoBehaviour
             {
                 // Problemas del servidor
                 _popUp.Show("Ups!", "Hay problemas con el servidor. Intente de nuevo");
+                imgLike.color = temp;
             }
         });              
     }
