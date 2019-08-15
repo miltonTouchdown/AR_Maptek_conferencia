@@ -89,4 +89,32 @@ MonoBehaviour:
     definedARScene: 0
     expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
     trackersPrefab:
-    - {fileID: 0}
+    - {fileID: 1750906770608908998, guid: 7bc980c5f14918045b5011c37a267c50, type: 3}
+  - expoName: DecisionCapPlanEst
+    idExpo: 6
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 1334192777799519119, guid: 3fe4398868669304585ddcdd7731b0a6, type: 3}
+  - expoName: StopeOptimizer
+    idExpo: 13
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 1821449236710110147, guid: ccbaa29b2e29a2940967d96c501ed746, type: 3}
+  - expoName: GradeControlOptimiser
+    idExpo: 16
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 5959734714966946014, guid: 5ba1e45a6168b5e4c893e73b72f04397, type: 3}
+  - expoName: DrillandBlastEpoch
+    idExpo: 18
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 12386601953076735, guid: 4815b280c5f78084ab3c3c77192332eb, type: 3}

@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 60eb13b1fc48c3a4c9fef90107ac1136
+guid: 907ba117549e3d14eb38b0139127fef4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: lambert1
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: CON_F05_1992_2
+    100000: Group42656
+    100002: //RootNode
+    400000: Group42656
+    400002: //RootNode
+    2100000: Group42656Mat
+    2300000: Group42656
+    3300000: Group42656
+    4300000: Group42656
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert1
+      name: Group42656Mat
     second: {fileID: 2100000, guid: 05f1b7e3ee358a44993bdf41ee6e51b6, type: 2}
   materials:
     importMaterials: 1

@@ -1,14 +1,21 @@
 fileFormatVersion: 2
-guid: 60eb13b1fc48c3a4c9fef90107ac1136
+guid: 25bd70911ed05574b89a680443a28a52
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: polySurface3
+    100002: polySurface4
+    100004: //RootNode
+    400000: polySurface3
+    400002: polySurface4
+    400004: //RootNode
     2100000: lambert1
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: CON_F05_1992_2
+    2300000: polySurface3
+    2300002: polySurface4
+    3300000: polySurface3
+    3300002: polySurface4
+    4300000: polySurface3
+    4300002: polySurface4
   externalObjects:
   - first:
       type: UnityEngine:Material

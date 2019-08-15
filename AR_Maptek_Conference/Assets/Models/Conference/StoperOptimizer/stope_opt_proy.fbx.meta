@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 60eb13b1fc48c3a4c9fef90107ac1136
+guid: b9c0fa790cc2dc340b10d72a003981d9
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,7 @@ ModelImporter:
     2100000: lambert1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: CON_F05_1992_2
+    4300000: stope_opt_proy:Group60523
   externalObjects:
   - first:
       type: UnityEngine:Material
