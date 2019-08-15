@@ -13,17 +13,45 @@ MonoBehaviour:
   m_Name: ARExpoData
   m_EditorClassIdentifier: 
   expos:
-  - expoName: Maptek
+  - expoName: ScannerSR3
     idExpo: 11
     hasDefinedARScene: 0
     definedARScene: 0
     expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
     trackersPrefab:
     - {fileID: 7368610367261692949, guid: 1facab94aa73a664daa87b58aaeb8e5a, type: 3}
-  - expoName: Exponor
+  - expoName: SentryRelaves
     idExpo: 3
     hasDefinedARScene: 0
     definedARScene: 0
     expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
     trackersPrefab:
     - {fileID: 9018374859742226817, guid: ad4a24443dd3750449317b1757dadcfd, type: 3}
+  - expoName: KeynoteDeepLearning
+    idExpo: 2
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 1272617310627823156, guid: 0a6c5c7d109d76748a606c71dd83c76a, type: 3}
+  - expoName: BlastLogic
+    idExpo: 7
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 4851074060469271298, guid: a469a54ab8e0afc47af7fd548eac99ab, type: 3}
+  - expoName: EvolutionEpoch
+    idExpo: 10
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 8729437416772988983, guid: 89ed0f4db09176242bab48aa76118ea5, type: 3}
+  - expoName: SentryTopos
+    idExpo: 17
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 8729437416772988983, guid: 89ed0f4db09176242bab48aa76118ea5, type: 3}
