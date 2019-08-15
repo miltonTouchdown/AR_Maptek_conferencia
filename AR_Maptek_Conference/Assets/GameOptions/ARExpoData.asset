@@ -54,4 +54,39 @@ MonoBehaviour:
     definedARScene: 0
     expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
     trackersPrefab:
-    - {fileID: 8729437416772988983, guid: 89ed0f4db09176242bab48aa76118ea5, type: 3}
+    - {fileID: 2603244958751568778, guid: e6347d116d0c10d4180feeab06d9e252, type: 3}
+  - expoName: DrillholeOptimiser
+    idExpo: 20
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 2367151090034101605, guid: d48082ea6f062504782d6943191aa67b, type: 3}
+  - expoName: BlastLogic2
+    idExpo: 22
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 5417323600941099168, guid: e598f08537ff7494f982a91bb57de7c0, type: 3}
+  - expoName: EurekayVulkan
+    idExpo: 41
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 0}
+  - expoName: EscaneoLaserMov
+    idExpo: 42
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 5445749092726462022, guid: 096b39504a99e3c4aa9aaaf61a448394, type: 3}
+  - expoName: RoapmapVulcan
+    idExpo: 23
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 0}
