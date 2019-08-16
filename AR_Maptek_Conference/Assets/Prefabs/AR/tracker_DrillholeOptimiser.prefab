@@ -33,7 +33,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2367151090034101605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.949, y: 0.457, z: 0}
   m_LocalScale: {x: 0.708255, y: 0.708255, z: 0.708255}
   m_Children:
   - {fileID: 2363405128081829009}
@@ -336,17 +336,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2363405128081829009}
     m_Modifications:
-    - target: {fileID: 100000, guid: cac1ac76f313ea84bac52989609de9fb, type: 3}
-      propertyPath: m_Name
-      value: budget2
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cac1ac76f313ea84bac52989609de9fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cac1ac76f313ea84bac52989609de9fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.38
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cac1ac76f313ea84bac52989609de9fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -396,6 +392,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cac1ac76f313ea84bac52989609de9fb, type: 3}
+      propertyPath: m_Name
+      value: budget2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: cac1ac76f313ea84bac52989609de9fb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3f77e77684de564b9a7c4973da19e05, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cac1ac76f313ea84bac52989609de9fb, type: 3}
 --- !u!1 &384854554575678010 stripped
@@ -423,11 +427,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8bf3dac7e67edc5478606ec06ff540bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.28
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8bf3dac7e67edc5478606ec06ff540bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.38
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8bf3dac7e67edc5478606ec06ff540bb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -477,6 +481,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 8bf3dac7e67edc5478606ec06ff540bb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3f77e77684de564b9a7c4973da19e05, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bf3dac7e67edc5478606ec06ff540bb, type: 3}
 --- !u!1 &544637700577272413 stripped
@@ -504,11 +512,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc25edc68bdfec247b57d8e90f9644d8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.23
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc25edc68bdfec247b57d8e90f9644d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.38
+      value: 1.02
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc25edc68bdfec247b57d8e90f9644d8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -579,17 +587,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2363405128081829009}
     m_Modifications:
-    - target: {fileID: 100000, guid: 4b8682179aef6544582bff1907ebbc23, type: 3}
-      propertyPath: m_Name
-      value: budget3
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4b8682179aef6544582bff1907ebbc23, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.45
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4b8682179aef6544582bff1907ebbc23, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.38
+      value: -0.45
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4b8682179aef6544582bff1907ebbc23, type: 3}
       propertyPath: m_LocalPosition.z
@@ -639,6 +643,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4b8682179aef6544582bff1907ebbc23, type: 3}
+      propertyPath: m_Name
+      value: budget3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 4b8682179aef6544582bff1907ebbc23, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3f77e77684de564b9a7c4973da19e05, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b8682179aef6544582bff1907ebbc23, type: 3}
 --- !u!1 &6330688147712530494 stripped

@@ -33,7 +33,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272617310627823156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.09, y: 0, z: -0.241}
   m_LocalScale: {x: 0.708255, y: 0.708255, z: 0.708255}
   m_Children:
   - {fileID: 1278021314639421376}
@@ -336,17 +336,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1278021314639421376}
     m_Modifications:
-    - target: {fileID: 100000, guid: 6459e88afc1c8b24abc143d11950256d, type: 3}
-      propertyPath: m_Name
-      value: OXI
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6459e88afc1c8b24abc143d11950256d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6459e88afc1c8b24abc143d11950256d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6459e88afc1c8b24abc143d11950256d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -396,6 +392,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6459e88afc1c8b24abc143d11950256d, type: 3}
+      propertyPath: m_Name
+      value: OXI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 6459e88afc1c8b24abc143d11950256d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b34b63c1ab95fe4faa0ff48d077ee40, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6459e88afc1c8b24abc143d11950256d, type: 3}
 --- !u!1 &3957124779400844256 stripped
@@ -417,10 +421,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1278021314639421376}
     m_Modifications:
-    - target: {fileID: 100000, guid: d2b0ec42d3ec487479ac3da19237b3fa, type: 3}
-      propertyPath: m_Name
-      value: PRI
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2b0ec42d3ec487479ac3da19237b3fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -477,6 +477,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2b0ec42d3ec487479ac3da19237b3fa, type: 3}
+      propertyPath: m_Name
+      value: PRI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: d2b0ec42d3ec487479ac3da19237b3fa, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5979eac5793543b468ad362066a05be6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b0ec42d3ec487479ac3da19237b3fa, type: 3}
 --- !u!1 &8440669435690687568 stripped
@@ -498,10 +506,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1278021314639421376}
     m_Modifications:
-    - target: {fileID: 100000, guid: 112afd0ea3ee70043949a65bded78f71, type: 3}
-      propertyPath: m_Name
-      value: SUL
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 112afd0ea3ee70043949a65bded78f71, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -558,6 +562,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 112afd0ea3ee70043949a65bded78f71, type: 3}
+      propertyPath: m_Name
+      value: SUL
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 112afd0ea3ee70043949a65bded78f71, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 04974d131b761074489d1f4d57fc2455, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 112afd0ea3ee70043949a65bded78f71, type: 3}
 --- !u!1 &8511384172293484857 stripped
@@ -639,6 +651,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 6a5b5e73419fd1d49a598f0a5ebcbce0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3f77e77684de564b9a7c4973da19e05, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a5b5e73419fd1d49a598f0a5ebcbce0, type: 3}
 --- !u!1 &9132300422479914525 stripped
