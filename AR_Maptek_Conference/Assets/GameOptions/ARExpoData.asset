@@ -75,7 +75,7 @@ MonoBehaviour:
     definedARScene: 0
     expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
     trackersPrefab:
-    - {fileID: 0}
+    - {fileID: 6990698042707485449, guid: a908a488605e2274abf32a7a8349065d, type: 3}
   - expoName: EscaneoLaserMov
     idExpo: 42
     hasDefinedARScene: 0
@@ -118,3 +118,17 @@ MonoBehaviour:
     expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
     trackersPrefab:
     - {fileID: 12386601953076735, guid: 4815b280c5f78084ab3c3c77192332eb, type: 3}
+  - expoName: BienvenidaApertura
+    idExpo: 1
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 6785011790070761870, guid: 8f463197eab1d3c4cb8d94c884bd256b, type: 3}
+  - expoName: InteractiveBlockPlanner
+    idExpo: 21
+    hasDefinedARScene: 0
+    definedARScene: 0
+    expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
+    trackersPrefab:
+    - {fileID: 8473811695597866924, guid: b2f2d42025591e54ab25c68fa29be0a1, type: 3}
