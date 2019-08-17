@@ -595,13 +595,8 @@ MonoBehaviour:
     Name: masivo
     Model: {fileID: 6703504709460753449}
     isOverlap: 1
-    IsActive: 0
+    IsActive: 1
   - Id: 1
-    Name: topo
-    Model: {fileID: 0}
-    isOverlap: 1
-    IsActive: 0
-  - Id: 2
     Name: veta
     Model: {fileID: 8212461760918743361}
     isOverlap: 1

@@ -349,17 +349,12 @@ MonoBehaviour:
   - Id: 0
     Name: camioneta
     Model: {fileID: 7533954244797140578}
-    isOverlap: 1
+    isOverlap: 0
     IsActive: 1
   - Id: 1
     Name: topo1
     Model: {fileID: 2517477012029296560}
-    isOverlap: 1
-    IsActive: 0
-  - Id: 2
-    Name: topo2
-    Model: {fileID: 0}
-    isOverlap: 1
+    isOverlap: 0
     IsActive: 0
   initModelsDeactivate: 1
 --- !u!114 &5332325554174687968

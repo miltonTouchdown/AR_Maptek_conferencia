@@ -313,24 +313,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modelsTarget:
   - Id: 0
-    Name: Def
-    Model: {fileID: 1563998924338675078}
-    isOverlap: 1
+    Name: Sentry
+    Model: {fileID: 6527329101481320682}
+    isOverlap: 0
     IsActive: 1
   - Id: 1
-    Name: Sentry
-    Model: {fileID: 0}
-    isOverlap: 1
-    IsActive: 0
-  - Id: 2
-    Name: topo
-    Model: {fileID: 0}
-    isOverlap: 1
-    IsActive: 0
-  - Id: 3
-    Name: def
-    Model: {fileID: 0}
-    isOverlap: 1
+    Name: Isite
+    Model: {fileID: 8390344445998943585}
+    isOverlap: 0
     IsActive: 0
   initModelsDeactivate: 1
 --- !u!114 &2716659430475865900
@@ -661,12 +651,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ecda0e3d0233c2043a2aa6f81136e09c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9628d0e2e34c46048ab861fbefd1e89f, type: 3}
---- !u!1 &1563998924338675078 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 9628d0e2e34c46048ab861fbefd1e89f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1563998924338707238}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1563998924338569638 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9628d0e2e34c46048ab861fbefd1e89f,
@@ -786,6 +770,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ecda0e3d0233c2043a2aa6f81136e09c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e87e77ea878be5428e6d094b5ee7fb6, type: 3}
+--- !u!1 &6527329101481320682 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100026, guid: 8e87e77ea878be5428e6d094b5ee7fb6,
+    type: 3}
+  m_PrefabInstance: {fileID: 6527329101481289296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6527329101481163978 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400026, guid: 8e87e77ea878be5428e6d094b5ee7fb6,
@@ -945,6 +935,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 4e4effa1e18581749b7fe59a3a36a6dd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f1c6c80fd58d6e42a2b2c53f1a5313f, type: 3}
+--- !u!1 &8390344445998943585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 7f1c6c80fd58d6e42a2b2c53f1a5313f,
+    type: 3}
+  m_PrefabInstance: {fileID: 8390344445999041473}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8390344445999436097 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7f1c6c80fd58d6e42a2b2c53f1a5313f,

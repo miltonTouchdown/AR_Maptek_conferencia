@@ -305,7 +305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2363405128081829009}
   m_Layer: 0
-  m_Name: budgets=excluyentes. TopoB=no
+  m_Name: models
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

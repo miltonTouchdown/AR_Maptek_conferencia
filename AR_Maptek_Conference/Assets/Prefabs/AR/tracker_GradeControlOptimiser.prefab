@@ -655,27 +655,22 @@ MonoBehaviour:
   - Id: 0
     Name: blas
     Model: {fileID: 4804504817576924484}
-    isOverlap: 1
-    IsActive: 0
+    isOverlap: 0
+    IsActive: 1
   - Id: 1
     Name: pol1
     Model: {fileID: 5393743478646251344}
-    isOverlap: 1
+    isOverlap: 0
     IsActive: 0
   - Id: 2
     Name: pol2
     Model: {fileID: 8967085754697567170}
-    isOverlap: 1
+    isOverlap: 0
     IsActive: 0
   - Id: 3
-    Name: gc
-    Model: {fileID: 0}
-    isOverlap: 1
-    IsActive: 0
-  - Id: 4
     Name: topo
     Model: {fileID: 1437733412652928778}
-    isOverlap: 1
+    isOverlap: 0
     IsActive: 0
   initModelsDeactivate: 1
 --- !u!114 &5959734714966946763
@@ -1120,6 +1115,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5959734714966946218}
     m_Modifications:
+    - target: {fileID: 100000, guid: 7f45c65eb0163304c8994a9ba3dae08f, type: 3}
+      propertyPath: m_Name
+      value: POL2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f45c65eb0163304c8994a9ba3dae08f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9903.837
@@ -1175,10 +1174,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 7f45c65eb0163304c8994a9ba3dae08f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.41143876
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 7f45c65eb0163304c8994a9ba3dae08f, type: 3}
-      propertyPath: m_Name
-      value: POL2
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 7f45c65eb0163304c8994a9ba3dae08f, type: 3}
       propertyPath: m_Materials.Array.data[0]

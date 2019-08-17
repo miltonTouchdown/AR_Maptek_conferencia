@@ -492,35 +492,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modelsTarget:
   - Id: 0
-    Name: agu
-    Model: {fileID: 0}
-    isOverlap: 1
-    IsActive: 0
-  - Id: 1
-    Name: agu
-    Model: {fileID: 0}
-    isOverlap: 1
-    IsActive: 0
-  - Id: 2
-    Name: ahu
-    Model: {fileID: 0}
-    isOverlap: 1
-    IsActive: 0
-  - Id: 3
-    Name: ahu
-    Model: {fileID: 0}
-    isOverlap: 1
-    IsActive: 0
-  - Id: 4
-    Name: volcan
-    Model: {fileID: 0}
-    isOverlap: 1
-    IsActive: 0
-  - Id: 5
     Name: volcan
     Model: {fileID: 7617573484641048614}
     isOverlap: 1
-    IsActive: 0
+    IsActive: 1
   initModelsDeactivate: 1
 --- !u!114 &6785011790070762139
 MonoBehaviour:
@@ -600,6 +575,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6785011790070761722}
     m_Modifications:
+    - target: {fileID: 100000, guid: 71a9c40b3bbbcdf428502d0e4ae5fb46, type: 3}
+      propertyPath: m_Name
+      value: Volcan_Rano_Kau__doble_cara
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 71a9c40b3bbbcdf428502d0e4ae5fb46, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0011937
@@ -655,10 +634,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 71a9c40b3bbbcdf428502d0e4ae5fb46, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.04526152
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 71a9c40b3bbbcdf428502d0e4ae5fb46, type: 3}
-      propertyPath: m_Name
-      value: Volcan_Rano_Kau__doble_cara
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 71a9c40b3bbbcdf428502d0e4ae5fb46, type: 3}
       propertyPath: m_Materials.Array.data[0]
