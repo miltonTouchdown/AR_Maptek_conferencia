@@ -35,12 +35,12 @@ MonoBehaviour:
     trackersPrefab:
     - {fileID: 1272617310627823156, guid: 0a6c5c7d109d76748a606c71dd83c76a, type: 3}
   - expoName: BlastLogic
-    idExpo: 7
+    idExpo: -1
     hasDefinedARScene: 0
     definedARScene: 0
     expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
     trackersPrefab:
-    - {fileID: 4851074060469271298, guid: a469a54ab8e0afc47af7fd548eac99ab, type: 3}
+    - {fileID: 0}
   - expoName: EvolutionEpoch
     idExpo: 10
     hasDefinedARScene: 0
@@ -63,12 +63,12 @@ MonoBehaviour:
     trackersPrefab:
     - {fileID: 2367151090034101605, guid: d48082ea6f062504782d6943191aa67b, type: 3}
   - expoName: BlastLogic2
-    idExpo: 22
+    idExpo: -1
     hasDefinedARScene: 0
     definedARScene: 0
     expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
     trackersPrefab:
-    - {fileID: 5417323600941099168, guid: e598f08537ff7494f982a91bb57de7c0, type: 3}
+    - {fileID: 0}
   - expoName: EurekayVulkan
     idExpo: 41
     hasDefinedARScene: 0
@@ -84,26 +84,26 @@ MonoBehaviour:
     trackersPrefab:
     - {fileID: 5445749092726462022, guid: 096b39504a99e3c4aa9aaaf61a448394, type: 3}
   - expoName: RoapmapVulcan
-    idExpo: 23
+    idExpo: -1
     hasDefinedARScene: 0
     definedARScene: 0
     expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
     trackersPrefab:
-    - {fileID: 1750906770608908998, guid: 7bc980c5f14918045b5011c37a267c50, type: 3}
+    - {fileID: 0}
   - expoName: DecisionCapPlanEst
-    idExpo: 6
+    idExpo: -1
     hasDefinedARScene: 0
     definedARScene: 0
     expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
     trackersPrefab:
-    - {fileID: 1334192777799519119, guid: 3fe4398868669304585ddcdd7731b0a6, type: 3}
+    - {fileID: 0}
   - expoName: StopeOptimizer
-    idExpo: 13
+    idExpo: -1
     hasDefinedARScene: 0
     definedARScene: 0
     expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
     trackersPrefab:
-    - {fileID: 1821449236710110147, guid: ccbaa29b2e29a2940967d96c501ed746, type: 3}
+    - {fileID: 0}
   - expoName: GradeControlOptimiser
     idExpo: 16
     hasDefinedARScene: 0
@@ -126,9 +126,9 @@ MonoBehaviour:
     trackersPrefab:
     - {fileID: 6785011790070761870, guid: 8f463197eab1d3c4cb8d94c884bd256b, type: 3}
   - expoName: InteractiveBlockPlanner
-    idExpo: 21
+    idExpo: -1
     hasDefinedARScene: 0
     definedARScene: 0
     expoLogo: {fileID: 21300000, guid: 28f6e8b3508c49548944417042a6e1fc, type: 3}
     trackersPrefab:
-    - {fileID: 8473811695597866924, guid: b2f2d42025591e54ab25c68fa29be0a1, type: 3}
+    - {fileID: 0}
